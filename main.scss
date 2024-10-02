@@ -1,0 +1,118 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --slate100: hsl(202, 86%, 94%);
+  --slate300: hsl(203, 41%, 72%);
+  --slate500: hsl(200, 26%, 54%);
+  --slate700: hsl(200, 24%, 40%);
+  --slate900: hsl(202, 55%, 16%);
+
+  --lime: hsl(61, 70%, 52%);
+  --red: hsl(4, 69%, 50%);
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1;
+  font-family: "Plus Jakarta Sans";
+  font-size: 1.6rem;
+  background-color: var(--slate100);
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: var(--slate500);
+  font-weight: 500;
+}
+// - Weights: 500, 700
+
+.container {
+  margin: 20rem auto;
+  max-width: 100rem;
+  display: flex;
+}
+.btn {
+  background-color: var(--lime);
+  border: none;
+  padding: 1.2rem 3.2rem;
+  border-radius: 100px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  font-size: 1.6rem;
+  gap: 2rem;
+}
+
+.primary-heading {
+  font-size: 2.4rem;
+}
+
+.secondary-heading {
+  font-size: 2.4rem;
+}
+
+.calculator {
+  background-color: var(--white);
+  padding: 3rem;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &-heading {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-mortgage-amount {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    font-size: 1.6rem;
+    padding: 1.2rem 0;
+    border-radius: 5px;
+    border: 1px solid var(--slate500);
+    position: relative;
+    margin-bottom: 3rem;
+  }
+
+  &-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-term {
+      input {
+        width: 90%;
+      }
+    }
+
+    &-rate {
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+.results {
+  background-color: var(--slate900);
+  color: var(--white);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
