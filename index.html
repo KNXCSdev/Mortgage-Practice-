@@ -37,10 +37,17 @@
             <label class="calculator-label">Interest Rate</label> <input type="number" />
           </div>
         </div>
-        <label>Mortgage Type</label>
-        <input type="radio" id="repayment" name="type" value="Repayment" />
-        <input type="radio" id="interest" name="type" value="Interest Only" />
-
+        <div class="calculator-radio">
+          <label>Mortgage Type</label>
+          <div class="calculator-radio-border">
+            <input type="radio" id="repayment" name="type" id="rep" value="Repayment" />
+            <label for="repayment">Repayment</label>
+          </div>
+          <div class="calculator-radio-border">
+            <input type="radio" id="interest" name="type" value="Interest Only" />
+            <label for="interest">Interest Only</label>
+          </div>
+        </div>
         <button class="btn">
           <img src="/assets/images/icon-calculator.svg" alt="" />Calculate Repayments
         </button>
