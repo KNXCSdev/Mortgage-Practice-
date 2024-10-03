@@ -25,40 +25,81 @@
           <h1 class="primary-heading">Mortgage Calculator</h1>
           <a href="#" class="calculator-heading-link">Clear All</a>
         </div>
+
         <div class="calculator-mortgage-amount">
           <label>Mortgage Amount</label>
-          <input type="number" />
+          <input type="number" required id="amount" />
         </div>
+
         <div class="calculator-inputs">
           <div class="calculator-inputs-term">
-            <label class="calculator-label">Mortgage Term</label> <input type="number" />
+            <label class="calculator-label">Mortgage Term</label>
+            <input type="number" required id="term" />
           </div>
+
           <div class="calculator-inputs-rate">
-            <label class="calculator-label">Interest Rate</label> <input type="number" />
+            <label class="calculator-label">Interest Rate</label>
+            <input type="number" required id="rate" />
           </div>
         </div>
+
         <div class="calculator-radio">
           <label>Mortgage Type</label>
           <div class="calculator-radio-border">
-            <input type="radio" id="repayment" name="type" id="rep" value="Repayment" />
+            <input
+              type="radio"
+              id="repayment"
+              name="type"
+              id="rep"
+              value="Repayment"
+              required
+              class="radio"
+            />
             <label for="repayment">Repayment</label>
           </div>
+
           <div class="calculator-radio-border">
-            <input type="radio" id="interest" name="type" value="Interest Only" />
+            <input
+              type="radio"
+              id="interest"
+              name="type"
+              value="Interest Only"
+              required
+              class="radio"
+            />
             <label for="interest">Interest Only</label>
           </div>
         </div>
+
         <button class="btn">
           <img src="/assets/images/icon-calculator.svg" alt="" />Calculate Repayments
         </button>
       </div>
+
       <div class="results">
-        <img src="assets/images/illustration-empty.svg" alt="" />
-        <h2 class="secondary-heading">Results shown here</h2>
-        <p class="results-description">
-          Complete the form and click “calculate repayments” to see what your monthly repayments
-          would be.
-        </p>
+        <div class="results-empty">
+          <img src="assets/images/illustration-empty.svg" alt="" />
+          <h2 class="secondary-heading">Results shown here</h2>
+          <p class="results-description">
+            Complete the form and click “calculate repayments” to see what your monthly repayments
+            would be.
+          </p>
+        </div>
+        <div class="results-filled">
+          <h2 class="secondary-heading">Your results</h2>
+          <p class="results-filled-description">
+            Your results Your results are shown below based on the information you provided. To
+            adjust the results, edit the form and click “calculate repayments” again.
+          </p>
+          <div class="results-filled-repayments">
+            <h3 class="tertiary-heading">Your monthly repayments</h3>
+            <span class="value-symbol">£</span><span class="value">1,797.74</span>
+            <div class="results-filled-repay">
+              <h3 class="tertiary-heading">Total you'll repay over the term</h3>
+              <span class="repay-symbol">£</span><span class="repay">539,322.94</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
@@ -76,5 +117,4 @@ Calculate Repayments
 <!-- Completed results start -->
 
 <!-- Your results Your results are shown below based on the information you provided. To adjust the
-results, edit the form and click “calculate repayments” again. Your monthly repayments Total you'll
-repay over the term Completed results end  -->
+results, edit the form and click “calculate repayments” again. Your monthly repayments  Completed results end  -->
